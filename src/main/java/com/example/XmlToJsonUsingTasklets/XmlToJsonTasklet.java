@@ -23,7 +23,7 @@ public class XmlToJsonTasklet implements Tasklet {
 		String xmlContent = FileUtils.readFileToString(xmlResource.getFile(), "UTF-8");
 
 		JSONObject jsonObject = XML.toJSONObject(xmlContent);
-		System.out.println("Before Converted XML to JSON successfully.");
+		System.out.println("After Converted XML to JSON successfully.");
 
 		File jsonOutput = new File("targets/jsonFile.json");
 		try (FileWriter writer = new FileWriter(jsonOutput)) {
